@@ -19,12 +19,12 @@ class LocalStorageService {
     await Hive.initFlutter();
     
     // Register adapters (will be generated)
-    // Hive.registerAdapter(UserAdapter());
-    // Hive.registerAdapter(DeliveryAdapter());
-    // Hive.registerAdapter(InventoryTransactionAdapter());
-    // Hive.registerAdapter(FaultySimAdapter());
-    // Hive.registerAdapter(FuelEntryAdapter());
-    // Hive.registerAdapter(AppSettingsAdapter());
+    Hive.registerAdapter(UserAdapter());
+    Hive.registerAdapter(DeliveryAdapter());
+    Hive.registerAdapter(InventoryTransactionAdapter());
+    Hive.registerAdapter(FaultySimAdapter());
+    Hive.registerAdapter(FuelEntryAdapter());
+    Hive.registerAdapter(AppSettingsAdapter());
     
     // Open boxes
     _userBox = await Hive.openBox<User>('users');
